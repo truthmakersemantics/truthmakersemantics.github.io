@@ -1,0 +1,12 @@
+{{ define "header-add" }}
+<h1 class="header_title">
+    {{ .Title }}
+</h1>
+<h2 class="header_subtitle">
+    {{ .Params.subtitle }}
+</h2>
+{{ partial "menus/header-list.html" . }}
+{{ end }}
+{{ define "main" }}
+{{ .Content }}
+{{ end }}

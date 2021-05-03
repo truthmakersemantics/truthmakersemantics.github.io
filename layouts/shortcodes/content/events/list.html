@@ -1,0 +1,15 @@
+{{ $mode := .Get 0 }}
+{{ $events := sort .Site.Data.events.events.main "begin_date" "desc"}}
+<div class="events">
+    {{ range $events }}
+    {{ if (eq $mode "upcoming") }}
+    {{ if (gt (time .begin_date) now) }}
+    {{- partial "content/events/render.html" . -}}
+    {{ end }}
+    {{ else if (eq $mode "archive") }}
+    {{ if  (lt (time .begin_date) now) }}
+    {{ partial "content/events/render.html" . }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</div>

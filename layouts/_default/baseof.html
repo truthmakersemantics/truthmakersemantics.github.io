@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{- partial "meta/head.html" . -}}
+    </head>
+    <body>
+        <div class="header">
+            {{partial "header/title.html" .}}
+            {{partial "menus/header-main.html" .}}
+            {{block "header-add" . }}
+            {{end}}
+        </div>
+        <div class="main">
+            {{block "main" . }}
+            {{end }}
+        </div>
+        <footer class="footer">
+            {{partial "footer/copyright.html"}}
+        </footer>
+    </body>
+</html>

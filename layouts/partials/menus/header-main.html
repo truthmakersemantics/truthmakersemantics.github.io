@@ -1,0 +1,8 @@
+<nav class="header-main">
+    {{- $cur := . -}}
+    {{- range .Site.Menus.main }}
+    <a class="menu-main{{if or ($cur.IsMenuCurrent "_main" .) ($cur.HasMenuCurrent "_main" .) }}active{{end}}" href="{{ .URL }}">
+        {{ .Name -}}
+    </a>
+    {{ end }}
+</nav>

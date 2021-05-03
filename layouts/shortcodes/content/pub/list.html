@@ -1,0 +1,26 @@
+{{ $search_keys := (slice (.Get 0)) }}
+{{ $pubs := sort .Site.Data.pub.publications.references "author" "desc"}}
+
+<div class="publ_list">
+    <ul>
+        {{ $prev_auth := "" }}
+        {{ $pub_keys := slice }}
+        {{ range $pubs }}
+            {{ $pub_keys = slice .keyword }}
+            {{ if (or
+                     (eq $search_keys (slice "all"))
+                     (intersect $search_keys $pub_keys)) }}
+                {{ $payload := (dict "pub" . "prev_auth" $prev_auth)}}
+                {{ if (eq .type "article-journal") }}
+                    <li>
+                        {{ partial "content/pub/article.html" $payload}}
+                    </li>
+                {{ end }}
+                <!-- Other publ processing -->
+                {{ $prev_auth = .author }}
+            {{ end }}
+        {{ end }}
+    </ul>
+</div>
+
+<!-- EOF -->

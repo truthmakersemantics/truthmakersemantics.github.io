@@ -1,0 +1,19 @@
+<section class="{{.Section}}">
+    <h2 class="preview_title">
+        <a href="{{ .Permalink }}" class="preview_link">
+            {{ .Title }}
+        </a>
+    </h2>
+    {{ with .Params.teaser }}
+    <p class="preview_teaser">
+        {{ . }}
+    </p>
+    {{ else }}
+    <p class="preview_summary">
+        {{ .Summary }}
+    </p>
+    {{ end }}
+    <a href="{{ .Permalink }}" class="preview_more">
+        ... more
+    </a>
+</section>
