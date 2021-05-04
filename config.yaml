@@ -2,4 +2,3 @@
 baseURL: https://truthmakersemantics.github.io
 title: Truthmaker Semantics
 menu : ["main", "list"]
-publishDir : "docs"

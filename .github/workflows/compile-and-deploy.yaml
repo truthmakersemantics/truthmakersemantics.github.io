@@ -37,16 +37,21 @@ jobs:
 
     # Step 3 - Clean and don't fail
     - name: Clean public directory
-      run: rm -rf docs
+      run: rm -rf public
 
     # Step 4 - Builds the site using the latest version of Hugo
     # Also specifies the theme we want to use
     - name: Build
       run: hugo -D
 
-    # Step 5 - Push our generated site to our gh-pages branch
+    # Step 5 - Code cleanup
+    #
+    - name: Prettify code
+      run: npm install --silent --global prettier ;; prettier -w public/
+
+    # Step 6 - Push our generated site to our gh-pages branch
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./public
