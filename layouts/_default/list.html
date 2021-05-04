@@ -8,5 +8,7 @@
 {{ partial "menus/header-list.html" . }}
 {{ end }}
 {{ define "main" }}
-{{ .Content }}
+<section class="{{ .Section }}">
+    {{ .Content }}
+</section>
 {{ end }}
