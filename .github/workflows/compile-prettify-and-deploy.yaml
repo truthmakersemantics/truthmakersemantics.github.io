@@ -26,7 +26,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-          submodules: true  # Fetch Hugo themes
+          submodules: true
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
     # Step 2 - Sets up the latest version of Hugo
@@ -46,7 +46,7 @@ jobs:
 
     # Step 5 - Code cleanup
     - name: Prettify code
-      uses: jkorb/prettier_action@v3.1
+      uses: truthmakersemantics/tms-prettier
       with:
         # This part is also where you can pass other options, for example:
         prettier_options: --write ./public
@@ -57,3 +57,4 @@ jobs:
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: html
