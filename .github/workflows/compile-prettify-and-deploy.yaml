@@ -46,7 +46,7 @@ jobs:
 
     # Step 5 - Code cleanup
     - name: Prettify code
-      uses: truthmakersemantics/tms-prettier
+      uses: truthmakersemantics/tms-prettier@v0.1
       with:
         # This part is also where you can pass other options, for example:
         prettier_options: --write ./public
