@@ -1,0 +1,44 @@
+{{/* This is short is the heart of our publications processing. It takes some search keys as input and displays matching publications from our (external) publications database in our preferred formatting. */}}
+{{ $search_keys := .Params }}
+{{ $pubs_raw := getJSON "https://raw.githubusercontent.com/truthmakersemantics/tms-bibliography/main/data/json/tms.json" }}
+{{ $pubs := sort $pubs_raw "author" "desc"}}
+<div class="publications_list">
+    {{ $prev_auth := "" }}
+    {{ $pub_keys := slice }}
+    {{ range $pubs }}
+    {{ $pub_keys = split .keyword ", "}}
+    {{ if (or
+    (eq $search_keys (slice "all"))
+    (intersect $search_keys $pub_keys)) }}
+    <div class="publication">
+        <h2 class="publication_title">
+            {{- title .title -}}
+        </h2>
+        <h3 class="publication_authors">
+            {{ with .author }}
+            {{ $auth_no := (len . ) }}
+            {{ $counter := 1 }}
+            {{ range . }}
+            {{ if (eq $counter 1) }}
+            {{- .dropping -}} {{ .family }}, {{ .given -}}
+            {{ else if (lt $counter $auth_no)}}
+            , {{ .given }} {{ .family }}
+            {{ else if (and (eq $counter $auth_no) (eq $auth_no 2)) }}
+            and {{ .given }} {{ .family }}
+            {{ else  }}
+            , and {{ .given }} {{ .family }}
+            {{ end -}}
+            {{ $counter = add $counter 1 }}
+            {{- end -}}
+            .
+            {{ end -}}
+        </h3>
+    {{ $payload := (dict "pub" . "prev_auth" $prev_auth)}}
+    {{ if (eq .type "article-journal") }}
+    {{ partial "content/publications/article.html" $payload}}
+    {{ end }}
+    </div>
+    {{ $prev_auth = .author }}
+    {{ end }}
+    {{ end }}
+</div>
