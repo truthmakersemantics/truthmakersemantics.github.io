@@ -1,6 +1,11 @@
 {{/* This short is the heart of our publications processing. It takes some search keys as input and displays matching publications from our (external) publications database in our preferred formatting. */}}
 
 {{ $search_keys := .Params }}
+{{ $other_keys := slice }}
+{{ $pub_keys := slice }}
+{{ $prev_pub_year := 0 }}
+{{ $pub_year := 0 }}
+{{ $payload := dict }}
 
 {{/* This gets the publications from our repository as a CSLJson */}}
 
@@ -13,52 +18,90 @@
     {{ if  .issued }}
         {{ $sorter = $sorter | append (dict "id" .id "year" (index (index (index .issued "date-parts") 0) 0) )}}
     {{ else }}
-        {{ $sorter = $sorter | append (dict "id" .id "year" "Forthcoming" ) }}
+        {{ $sorter = $sorter | append (dict "id" .id "year" "9999" ) }}
     {{ end }}
 {{ end }}
 
 {{/* Now on to the actual processing... */}}
 
-
-{{ $pub_keys := slice }}
-{{ $pub_counter := 0 }}
-
 {{ range sort $sorter "year" "desc" }}
 
-        {{ range where $pubs_raw "id" .id}}
+    {{ range where $pubs_raw "id" .id}}
 
             {{ $pub_keys = split .keyword ", "}}
 
             {{ if intersect $search_keys $pub_keys }}
 
-            <div class="publication">
-                <h2 class="publication_title">
-                    {{- title .title -}}
-                </h2>
-                <h3 class="publication_authors">
-                    {{ with .author }}
-                    {{ $auth_no := (len . ) }}
-                    {{ $counter := 1 }}
-                    {{ range . }}
-                    {{ if (eq $counter 1) }}
-                    {{ .given }} {{ with (index . "dropping-particle") }}{{ . }}{{ end }} {{ .family }}
-                    {{ else if (lt $counter $auth_no)}}
-                    , {{ .given }} {{ .family }}
-                    {{ else if (and (eq $counter $auth_no) (eq $auth_no 2)) }}
-                    and {{ .given }} {{ .family }}
-                    {{ else  }}
-                    , and {{ .given }} {{ .family }}
-                    {{ end -}}
-                    {{ $counter = add $counter 1 }}
-                    {{- end -}}
-                    .
-                    {{ end -}}
-                </h3>
-                {{ $payload := (dict "pub" . "prev_auth" "")}}
-                {{ if (eq .type "article-journal") }}
-                {{ partial "content/publications/article.html" $payload}}
+                {{ if .issued }}
+                    {{ $pub_year = (index .issued "date-parts" 0 0) }}
+                        {{ if ne $pub_year $prev_pub_year }}
+                            <h1>{{ $pub_year }}</h1>
+                        {{ end }}
+                {{ else }}
+                     {{ $pub_year = "Unpublished" }}
+                        {{ if ne $pub_year $prev_pub_year }}
+                            <h1>{{ $pub_year }}</h1>
+                        {{ end }}
                 {{ end }}
-            </div>
+
+                {{ $prev_pub_year = $pub_year }}
+
+                <div class="publication">
+                    <h2 class="publication_title">
+                        {{- title .title -}}
+                    </h2>
+                    <h3 class="publication_authors">
+                        {{ $payload = .author }}
+                        {{ partial "partials/content/publications/authors.html" $payload }}
+                    </h3>
+
+                    {{ with .annote }}
+                    <div class="publication_annotation">
+                        <p>{{ . }}</p>
+                    </div>
+                    {{ end }}
+
+                    <p class="publication_keys">
+                        Keywords:
+                        {{ $other_keys = $pub_keys | symdiff $search_keys }}
+                        <ul>
+                            {{ range $other_keys }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </p>
+
+                    <div class="publication_details">
+                        <p class="publication_container">
+                            {{ if eq .type "article-journal"}}
+                                {{ $payload = (dict "journal" (index . "container-title") "volume" .volume "issue" .issue "pages" .page) }}
+                                {{ partial "content/publications/article-journal.html" $payload}}
+                            {{ else if eq .type "chapter" }}
+                                {{ $payload = (dict "book" (index . "container-title") "editors" .editor "pages" .page "publisher" .publisher "place" (index . "publisher-place")) }}
+                                {{ partial "content/publications/chapter.html" $payload }}
+                            {{ else if eq .type "book" }}
+                                {{ $payload = (dict "publisher" .publisher "place" (index . "publisher-place")) }}
+                                {{ partial "content/publications/book.html" $payload }}
+                            {{ else if eq .type "paper-conference" }}
+                                {{ $payload = (dict "proceedings" (index . "container-title") "editors" .editor "pages" .page "publisher" .publisher "place" (index . "publisher-place")) }}
+                                {{ partial "content/publications/proceedings.html" $payload }}
+                            {{ else if eq .type "manuscript"}}
+                                Unpublished manuscript
+                            {{ else if eq .type "thesis" }}
+                                Thesis
+                            {{ end }}
+                       </p>
+                        {{ with .DOI }}
+                        <a class="publication_link" href="https://doi.org/{{ . }}">{{ . }}</a>
+                        {{ end }}
+                        {{ with .URL }}
+                        <a class="publication_link" href="{{ . }}">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+
             {{ end }}
-            {{ end }}
-    {{end}}
+
+       {{ end }}
+
+{{end}}
