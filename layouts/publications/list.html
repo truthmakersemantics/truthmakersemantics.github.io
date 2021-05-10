@@ -1,0 +1,22 @@
+{{ define "header-add" }}
+
+  <h1 class="header_title">
+      {{ .FirstSection.Title }}
+  </h1>
+
+  <h2 class="header_subtitle">
+      {{ if eq .CurrentSection .FirstSection }}
+        {{ .Params.subtitle }}
+      {{ else }}
+        {{ .CurrentSection.Title }}
+      {{ end }}
+  </h2>
+
+  {{ partial "menus/publications.html" . }}
+
+{{ end }}
+{{ define "main" }}
+<section class="{{ .Section }}">
+    {{ .Content }}
+</section>
+{{ end }}
