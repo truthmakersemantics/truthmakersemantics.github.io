@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All on Truthmaker Semantics</title>
+    <link>https://truthmakersemantics.github.io/publications/all/</link>
+    <description>Recent content in All on Truthmaker Semantics</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://truthmakersemantics.github.io/publications/all/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exact Truthmakers</title>
+      <link>https://truthmakersemantics.github.io/publications/all/exact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://truthmakersemantics.github.io/publications/all/exact/</guid>
+      <description>Unpublished Two Switches and Truthmaker Semantics Hüseyin Güngör  Analyses the Two Stitches puzzle from Ciardelli, Champollion, and Zhang using Fine’s exact truthmaker semantics for counterfactuals from (Fine 2012b)
+ Keywords:  logic conditionals  Unpublished manuscript https://www.academia.edu/42813176/Two_Switches_and_Truthmaker_Semantics   The Whole Truth Stephan Krämer  Formulates an account of what it means to give the “whole truth” and formally models it in exact truthmaker semantics.
+ Keywords:  philosophy language applications  In: Outstanding Contributions to Logic: Kit Fine, edited by Federico LG Faroldi and Frederik Van De Putte.</description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>https://truthmakersemantics.github.io/publications/all/applications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://truthmakersemantics.github.io/publications/all/applications/</guid>
+      <description>Unpublished Two-Dimensional Truthmaker Semantics Hasen Khudairi  Extends the framework of exact truthmaker semantics with the resources of two-dimensional semantics.
+ Keywords:  philosophy modality  Unpublished manuscript https://philarchive.org/archive/KHUTTS-2   The Whole Truth Stephan Krämer  Formulates an account of what it means to give the “whole truth” and formally models it in exact truthmaker semantics.
+ Keywords:  philosophy language exact truthmaking  In: Outstanding Contributions to Logic: Kit Fine, edited by Federico LG Faroldi and Frederik Van De Putte.</description>
+    </item>
+    
+    <item>
+      <title>Background</title>
+      <link>https://truthmakersemantics.github.io/publications/all/background/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://truthmakersemantics.github.io/publications/all/background/</guid>
+      <description>2016 Hyperintensionality Iliana Gioulatou  Compares various accounts of hyperintensional content. Ch. 5 contains a discussion of Fine’s approach.
+ Keywords:  philosophy exact truthmaking theory  Master’s thesis at University of Amsterdam, Institute for Logic, Language,; Computation. http://www.illc.uva.nl/Research/Publications/Reports/MoL-2016-24.text.pdf   2013 Recent Work in Relevant Logic Mark Jago  Contains a brief discussion of truthmakers and their relation to relevant logic (Restall 1996).
+ Keywords:  logic relevance logic theory  In: Analysis 73: 526-541 10.</description>
+    </item>
+    
+    <item>
+      <title>Inexact Truthmakers</title>
+      <link>https://truthmakersemantics.github.io/publications/all/inexact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://truthmakersemantics.github.io/publications/all/inexact/</guid>
+      <description>2021 Routley Star and Hyperintensionality Sergei Odintsov and Heinrich Wansing  Compares HYPE to Heyting-Ockam logic. Contains a characterization of HYPE as identical to a modal system introduced by Moisil. From the perspective of truthmaker semantics, these results can be understood as results about (a certain kind of) inexact truthmaker semantics.
+ Keywords:  logic modality theory  In: Journal of Philosophical Logic 50: 33-56 10.1007/s10992-020-09558-5   2020 Truthmaker Semantics for Relevant Logic Mark Jago  Presents an exact truthmaker semantics for the relevance logic &amp;lt;b&amp;gt;R&amp;lt;/b&amp;gt;.</description>
+    </item>
+    
+    <item>
+      <title>Theory</title>
+      <link>https://truthmakersemantics.github.io/publications/all/theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://truthmakersemantics.github.io/publications/all/theory/</guid>
+      <description>2021 Routley Star and Hyperintensionality Sergei Odintsov and Heinrich Wansing  Compares HYPE to Heyting-Ockam logic. Contains a characterization of HYPE as identical to a modal system introduced by Moisil. From the perspective of truthmaker semantics, these results can be understood as results about (a certain kind of) inexact truthmaker semantics.
+ Keywords:  logic modality inexact truthmaking  In: Journal of Philosophical Logic 50: 33-56 10.1007/s10992-020-09558-5   2020 Logics of Synonymy Levin Hornischer  Surveys various “logics of synonymy,” i.</description>
+    </item>
+    
+  </channel>
+</rss>
