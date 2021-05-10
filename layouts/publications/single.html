@@ -3,13 +3,13 @@
     {{ .FirstSection.Title }}
 </h1>
 <h2 class="header_subtitle">
-    {{ .CurrentSection.Title }}
+    {{ .CurrentSection.Title}} - {{ .Title }}
 </h2>
-{{ partial "menus/header-list.html" . }}
-
+{{ if eq .Section "publications" }}
+    {{ partial "menus/publications.html" . }}
 {{ end }}
+{{ end }}
+
 {{ define "main" }}
-<section class="{{ .Section }}">
-    {{ .Content }}
-</section>
+{{ .Content }}
 {{ end }}

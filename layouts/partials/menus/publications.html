@@ -1,0 +1,13 @@
+<nav class="publications_menu">
+    <ul>
+        <li><a href="{{ .FirstSection.Permalink }}">Key</a></li>
+        {{ range .FirstSection.Sections }}
+        <li><a href="{{ .Permalink }}">{{ .Params.title }}</a></li>
+        <ul>
+            {{ range .Pages}}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </ul>
+</nav>
