@@ -73,30 +73,29 @@
 
                     <div class="publication_details">
                         <p class="publication_container">
+
+                            {{ $payload = (dict "id" .id "container" (index . "container-title") "editors" .editor "volume" .volume "issue" .issue "page" .page  "publisher" .publisher "place" (index . "publisher-place") "genre" .genre) }}
+
                             {{ if eq .type "article-journal"}}
-                                {{ $payload = (dict "journal" (index . "container-title") "volume" .volume "issue" .issue "pages" .page) }}
                                 {{ partial "content/publications/article-journal.html" $payload}}
                             {{ else if eq .type "chapter" }}
-                                {{ $payload = (dict "book" (index . "container-title") "editors" .editor "pages" .page "publisher" .publisher "place" (index . "publisher-place")) }}
                                 {{ partial "content/publications/chapter.html" $payload }}
                             {{ else if eq .type "book" }}
-                                {{ $payload = (dict "publisher" .publisher "place" (index . "publisher-place")) }}
                                 {{ partial "content/publications/book.html" $payload }}
                             {{ else if eq .type "paper-conference" }}
-                                {{ $payload = (dict "proceedings" (index . "container-title") "editors" .editor "pages" .page "publisher" .publisher "place" (index . "publisher-place")) }}
-                                {{ partial "content/publications/proceedings.html" $payload }}
+                               {{ partial "content/publications/proceedings.html" $payload }}
                             {{ else if eq .type "manuscript"}}
-                                Unpublished manuscript
+                                <i>Unpublished manuscript</i>
                             {{ else if eq .type "thesis" }}
-                                Thesis
+                               {{ partial "content/publications/thesis.html" $payload}}
                             {{ end }}
                        </p>
-                        {{ with .DOI }}
-                        <a class="publication_link" href="https://doi.org/{{ . }}">{{ . }}</a>
-                        {{ end }}
-                        {{ with .URL }}
-                        <a class="publication_link" href="{{ . }}">{{ . }}</a>
-                        {{ end }}
+                       {{ with .DOI }}
+                       <a class="publication_link" href="https://doi.org/{{ . }}">{{ . }}</a>
+                       {{ end }}
+                       {{ with .URL }}
+                       <a class="publication_link" href="{{ . }}">{{ . }}</a>
+                       {{ end }}
                     </div>
                 </div>
 
