@@ -1,4 +1,4 @@
-{{ define "header-add" }}
+{{ define "header" }}
 
   <h1 class="header_title">
       {{ .FirstSection.Title }}
@@ -15,8 +15,11 @@
   {{ partial "menus/publications.html" . }}
 
 {{ end }}
+
 {{ define "main" }}
-<section class="{{ .Section }}">
-    {{ .Content }}
-</section>
+
+  <section class="{{ .Section }}">
+      {{ .Content }}
+  </section>
+
 {{ end }}

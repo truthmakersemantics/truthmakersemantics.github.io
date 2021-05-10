@@ -2,12 +2,14 @@
 <html lang="en">
     <head>
         {{- partial "meta/head.html" . -}}
+        {{ block "meta"}}
+        {{ end }}
     </head>
     <body>
         <div class="header">
             {{partial "header/title.html" .}}
             {{partial "menus/header-main.html" .}}
-            {{block "header-add" . }}
+            {{block "header" . }}
             {{end}}
         </div>
         <div class="main">
@@ -16,6 +18,8 @@
         </div>
         <footer class="footer">
             {{partial "footer/copyright.html"}}
+            {{ block "footer" }}
+            {{ end }}
         </footer>
     </body>
 </html>

@@ -1,15 +1,15 @@
-{{ define "header-add" }}
-<h1 class="header_title">
-    {{ .FirstSection.Title }}
-</h1>
-<h2 class="header_subtitle">
-    {{ .CurrentSection.Title }}
-</h2>
-{{ partial "menus/header-list.html" . }}
-
+{{ define "header" }}
+    <h1 class="header_title">
+        {{ .FirstSection.Title }}
+    </h1>
+    <h2 class="header_subtitle">
+        {{ .CurrentSection.Title }}
+    </h2>
+    {{ partial "menus/header-list.html" . }}
 {{ end }}
+
 {{ define "main" }}
-<section class="{{ .Section }}">
-    {{ .Content }}
-</section>
+    <section class="{{ .Section }}">
+        {{ .Content }}
+    </section>
 {{ end }}
