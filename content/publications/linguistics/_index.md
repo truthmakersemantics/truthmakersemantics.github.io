@@ -1,6 +1,6 @@
 ---
 title     : Linguistics
 weight    : 530
-menu      : list
+menu      : subsec
 ---
 {{< content/publications/list "linguistics" >}}

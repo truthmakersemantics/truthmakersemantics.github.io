@@ -1,6 +1,6 @@
 ---
 title     : Philosophy
 weight    : 520
-menu      : list
+menu      : subsec
 ---
 {{< content/publications/list "philosophy" >}}
