@@ -61,7 +61,7 @@
                     </div>
                     {{ end }}
 
-                    <p class="publication_keys">
+                    <div class="publication_keys">
                         Keywords:
                         {{ $other_keys = $pub_keys | symdiff $search_keys }}
                         <ul>
@@ -69,7 +69,7 @@
                             <li>{{ . }}</li>
                             {{ end }}
                         </ul>
-                    </p>
+                    </div>
 
                     <div class="publication_details">
                         <p class="publication_container">
