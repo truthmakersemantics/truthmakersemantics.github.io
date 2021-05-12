@@ -1,3 +1,6 @@
+{{ define "meta" }}
+{{ end }}
+
 {{ define "header" }}
 
   <h1 class="header_title">
@@ -19,7 +22,9 @@
 {{ define "main" }}
 
   <section class="{{ .Section }}">
+
       {{ .Content }}
+
   </section>
 
 {{ end }}

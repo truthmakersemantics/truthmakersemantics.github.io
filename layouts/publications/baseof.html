@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         {{ partial "meta/head.html" . }}
+
+        <link rel="stylesheet" href="{{ .Site.BaseURL}}/css/publications.css">
+        <script type="text/javascript" src="{{ .Site.BaseURL}}/js/toggle.js"></script>
+
         {{ block "meta" . }}
         {{ end }}
     </head>

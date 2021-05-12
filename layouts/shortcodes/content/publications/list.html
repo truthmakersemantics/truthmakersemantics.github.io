@@ -1,106 +1,128 @@
-{{/* This short is the heart of our publications processing. It takes some search keys as input and displays matching publications from our (external) publications database in our preferred formatting. */}}
+{{/* This short is the heart of our publications processing. It takes some
+     search keys as input and outputs HTML code to display the publications with
+     matching keywords by year in descending order. */}}
 
-{{ $search_keys := .Params }}
-{{ $other_keys := slice }}
-{{ $pub_keys := slice }}
+{{ $search_keys   := .Params }}
+{{ $other_keys    := slice }}
+{{ $pub_keys      := slice }}
+{{ $payload       := dict }}
 {{ $prev_pub_year := 0 }}
-{{ $pub_year := 0 }}
-{{ $payload := dict }}
+{{ $pub_year      := 0 }}
 
 {{/* This gets the publications from our repository as a CSLJson */}}
 
-{{ $pubs_raw := getJSON "https://raw.githubusercontent.com/truthmakersemantics/tms-bibliography/main/data/json/tms.json" }}
+{{ $publications := getJSON "https://raw.githubusercontent.com/truthmakersemantics/tms-bibliography/main/data/json/tms.json" }}
 
-{{/* But because the publication year is burried deep in the issued value, we can't straight-forwardly sort on it (index and sort don't play together). So we need to hack this thang... */}}
+{{/* Because the publication year is burried deep in the issued entry in CSLJson
+     and index and sort don't play together well, we need to sort with a helper,
+     which essentially just indexes the ids with their associated years. We index
+     publications without a year as forthcoming by assigning maximum value. */}}
 
-{{ $sorter := slice }}
-{{ range $pubs_raw }}
-    {{ if  .issued }}
-        {{ $sorter = $sorter | append (dict "id" .id "year" (index (index (index .issued "date-parts") 0) 0) )}}
-    {{ else }}
-        {{ $sorter = $sorter | append (dict "id" .id "year" "9999" ) }}
-    {{ end }}
+{{ $helper := slice }}
+{{ range $publications }}
+  {{ if  .issued }}
+    {{ $helper = $helper | append (dict "id"   .id
+                                        "year" (index .issued "date-parts" 0 0) )}}
+  {{ else }}
+    {{ $helper = $helper | append (dict "id" .id "year" "9999" ) }}
+  {{ end }}
 {{ end }}
 
-{{/* Now on to the actual processing... */}}
+{{/* Actual processing: With the help of our little friend, we go through
+     the publications by year and process them. */}}
 
-{{ range sort $sorter "year" "desc" }}
-
-    {{ range where $pubs_raw "id" .id}}
-
-            {{ $pub_keys = split .keyword ", "}}
-
-            {{ if intersect $search_keys $pub_keys }}
-
-                {{ if .issued }}
-                    {{ $pub_year = (index .issued "date-parts" 0 0) }}
-                        {{ if ne $pub_year $prev_pub_year }}
-                            <h1>{{ $pub_year }}</h1>
-                        {{ end }}
-                {{ else }}
-                     {{ $pub_year = "Unpublished" }}
-                        {{ if ne $pub_year $prev_pub_year }}
-                            <h1>{{ $pub_year }}</h1>
-                        {{ end }}
-                {{ end }}
-
-                {{ $prev_pub_year = $pub_year }}
-
-                <div class="publication">
-                    <h2 class="publication_title">
-                        {{- title .title -}}
-                    </h2>
-                    <h3 class="publication_authors">
-                        {{ $payload = .author }}
-                        {{ partial "partials/content/publications/authors.html" $payload }}
-                    </h3>
-
-                    {{ with .annote }}
-                    <div class="publication_annotation">
-                        <p>{{ . }}</p>
-                    </div>
-                    {{ end }}
-
-                    <div class="publication_keys">
-                        Keywords:
-                        {{ $other_keys = $pub_keys | symdiff $search_keys }}
-                        <ul>
-                            {{ range $other_keys }}
-                            <li>{{ . }}</li>
-                            {{ end }}
-                        </ul>
-                    </div>
-
-                    <div class="publication_details">
-                        <p class="publication_container">
-
-                            {{ $payload = (dict "id" .id "container" (index . "container-title") "editors" .editor "volume" .volume "issue" .issue "page" .page  "publisher" .publisher "place" (index . "publisher-place") "genre" .genre) }}
-
-                            {{ if eq .type "article-journal"}}
-                                {{ partial "content/publications/article-journal.html" $payload}}
-                            {{ else if eq .type "chapter" }}
-                                {{ partial "content/publications/chapter.html" $payload }}
-                            {{ else if eq .type "book" }}
-                                {{ partial "content/publications/book.html" $payload }}
-                            {{ else if eq .type "paper-conference" }}
-                               {{ partial "content/publications/proceedings.html" $payload }}
-                            {{ else if eq .type "manuscript"}}
-                                <i>Unpublished manuscript</i>
-                            {{ else if eq .type "thesis" }}
-                               {{ partial "content/publications/thesis.html" $payload}}
-                            {{ end }}
-                       </p>
-                       {{ with .DOI }}
-                       <a class="publication_link" href="https://doi.org/{{ . }}">{{ . }}</a>
-                       {{ end }}
-                       {{ with .URL }}
-                       <a class="publication_link" href="{{ . }}">{{ . }}</a>
-                       {{ end }}
-                    </div>
-                </div>
-
+{{ range sort $helper "year" "desc" }}
+  {{ range where $publications "id" .id}}
+    {{ $pub_keys = split .keyword ", "}}
+      {{ if intersect $search_keys $pub_keys }}
+        {{/* It's somewhat annoying to get the helper into the right context,
+             so instead of using the helper here, we just find the values
+             again. */}}
+        {{ if .issued }}
+          {{ $pub_year = (index .issued "date-parts" 0 0) }}
+          {{ if ne $pub_year $prev_pub_year }}
+            {{ if ne $prev_pub_year 0 }}
+              </div>
             {{ end }}
-
+            <a href="javascript:void(0)" onclick="toggle({{ $pub_year }})">
+            <h1>{{ $pub_year }}</h1>
+            </a>
+            <div class="publication_year hidden" id="{{ $pub_year }}">
+            {{ end }}
+          {{ else }}
+            {{ $pub_year = "Unpublished" }}
+            {{ if ne $pub_year $prev_pub_year }}
+              <a href="javascript:;"
+                 onlick="toggle({{- $pub_year -}})">
+              <h1>{{ $pub_year }}</h1>
+              </a>
+              <div class="publication_year hidden" id="{{ $pub_year }}">
+            {{ end }}
+          {{ end }}
+           {{ $prev_pub_year = $pub_year }}
+           <div class="publication">
+               <h2 class="publication_title">
+                   {{- title .title -}}
+               </h2>
+               <h3 class="publication_authors">
+                   {{ $payload = .author }}
+                   {{ partial "partials/content/publications/authors.html" $payload }}
+               </h3>
+               <button onclick="toggle({{ .id }})">Publication details</button>
+               <div class="publication_details hidden" id="{{ .id }}">
+               {{ if .annote }}
+                   <div class="publication_annotation">
+                       <p>{{ .annote }}</p>
+                   </div>
+               {{ end }}
+               <div class="publication_keys">
+                   <p>Keywords:</p>
+                   {{ $other_keys = $pub_keys | symdiff $search_keys }}
+                   <ul>
+                       {{ range $other_keys }}
+                       <li>{{ . }}</li>
+                       {{ end }}
+                   </ul>
+               </div>
+               <div class="publication_ref">
+                   <p class="publication_container">
+                   {{ $payload = (dict "id"        .id
+                                        "container" (index . "container-title")
+                                        "editors"   .editor
+                                        "volume"    .volume
+                                        "issue"     .issue
+                                        "page"      .page
+                                        "publisher" .publisher
+                                        "place"     (index . "publisher-place")
+                                        "genre"     .genre) }}
+                       {{ if eq .type "article-journal"}}
+                         {{ partial "content/publications/article-journal.html"
+                            $payload}}
+                       {{ else if eq .type "chapter" }}
+                         {{ partial "content/publications/chapter.html"
+                            $payload }}
+                       {{ else if eq .type "book" }}
+                         {{ partial "content/publications/book.html" $payload }}
+                       {{ else if eq .type "paper-conference" }}
+                         {{ partial "content/publications/proceedings.html"
+                            $payload }}
+                       {{ else if eq .type "manuscript"}}
+                         <i>Unpublished manuscript</i>
+                       {{ else if eq .type "thesis" }}
+                         {{ partial "content/publications/thesis.html" $payload}}
+                       {{ end }}
+                  </p>
+                  {{ if .DOI }}
+                    <a class="publication_link"
+                       href="https://doi.org/{{ .DOI }}">
+                      {{ .DOI }}
+                    </a>
+                  {{ else if .URL }}
+                    <a class="publication_link" href="{{ .URL }}">{{ .URL }}</a>
+                  {{ end }}
+			   </div>
+			</div>
+           </div>
        {{ end }}
-
+  {{ end }}
 {{end}}
