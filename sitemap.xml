@@ -2,77 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://truthmakersemantics.github.io/about/</loc>
+    <loc>https://truthmakersemantics.github.io/getting-started/</loc>
   </url><url>
     <loc>https://truthmakersemantics.github.io/news/</loc>
   </url><url>
+    <loc>https://truthmakersemantics.github.io/people/</loc>
+  </url><url>
     <loc>https://truthmakersemantics.github.io/events/</loc>
   </url><url>
-    <loc>https://truthmakersemantics.github.io/problems/</loc>
+    <loc>https://truthmakersemantics.github.io/open-problems/</loc>
   </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/all/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/all/exact/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/exact/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/linguistics/</loc>
+    <loc>https://truthmakersemantics.github.io/glossary/</loc>
   </url><url>
     <loc>https://truthmakersemantics.github.io/contact/</loc>
   </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/all/applications/</loc>
+    <loc>https://truthmakersemantics.github.io/advances-in-tms/</loc>
   </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/linguistics/applications/</loc>
+    <loc>https://truthmakersemantics.github.io/publications/</loc>
   </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/applications/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/applications/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/events/archive/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/all/background/</loc>
+    <loc>https://truthmakersemantics.github.io/resources/</loc>
   </url><url>
     <loc>https://truthmakersemantics.github.io/categories/</loc>
   </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/conditionals/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/conditionals/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/exact/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/all/inexact/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/inexact/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/inexact/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/background/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/modality/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/background/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/modality/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/relevance/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/relevance/</loc>
-  </url><url>
     <loc>https://truthmakersemantics.github.io/tags/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/all/theory/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/linguistics/theory/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/logic/theory/</loc>
-  </url><url>
-    <loc>https://truthmakersemantics.github.io/publications/philosophy/theory/</loc>
   </url><url>
     <loc>https://truthmakersemantics.github.io/</loc>
   </url>
