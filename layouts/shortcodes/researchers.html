@@ -1,0 +1,22 @@
+{{ $people := sort .Site.Data.people.main "affiliation" "desc"}}
+
+<div class="people">
+    {{ range $people }}
+      <div class="researcher">
+        <a href="{{ .homepage }}">
+          <img src="{{ .img }}" width="250">
+
+          <div class="centered">
+            {{ range .name }}
+            <h3> {{ .first }} {{ .last}} </h3>
+            {{ end }}
+
+            <p> {{ .affiliation }} </p>
+          </div>
+        </a>
+
+     </div>
+
+    {{ end }}
+
+</div>
