@@ -1,0 +1,31 @@
+main:
+
+  - definiendum: Exact truthmaking
+    definiens: |
+      "A state is an exact truthmaker for a statement iff it necessitates the
+      state while being wholly relevnt"
+    links: 
+  - definiendum: State
+    definiens: |
+      "It is also important in applying the semantics to appreciate that the
+      term ‘state’ is a mere term of art and need not be a state in any
+      intuitive sense of the term. Thus facts or events or even ordinary
+      individuals could, in principle, be taken to be states, as long as they
+      are capa- ble of being endowed with the relevant mereological structure
+      and can be properly regarded as verifiers. We allow the states, whatever
+      they might be, to be possible as well as actual (as with Gore winning the
+      presidency in 2001); and we even allow impossible states (as with Gore
+      both winning and losing the presidency in 2001). Thus verification will
+      have a coun- terfactual flavor; a verifying state is one that would make
+      a given statement true were it to obtain, not necessarily one that does
+      make the statement true. From a purely mathematical point of view, we may
+      take a state space to be an ordered"
+    links: 
+  - definiendum: Loose truthmaking
+    definiens: |
+       "Loose verification is a purely modal notion. A state or situation s
+       will loosely verify a statement just in case the state necessitates the
+       statement, that is, just in case it is impossible that the state obtain
+       and the statement not be true. Exact and inexact verification, by con-
+       trast, require that there be a relevant connection between state and
+       statement. With inexact"

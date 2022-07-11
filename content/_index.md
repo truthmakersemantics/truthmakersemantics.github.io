@@ -1,4 +1,5 @@
 ---
 title: Truthmaker Semantics
 ---
-Hi there! On this page you can find out more about truthmaker semantics.
+
+Welcome to the website of truthmaker semantics.

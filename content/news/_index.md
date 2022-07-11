@@ -1,7 +1,8 @@
 ---
 title     : News
 weight    : 200
-menu      : main
+teaser    : What's happening in tms
+menu      : main 
 ---
-+ Some recent news
-+ Some more news
+
+This site will contain news (automatically list all the recent changes to the website).

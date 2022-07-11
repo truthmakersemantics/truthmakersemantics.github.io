@@ -1,0 +1,46 @@
+{{ $terms := sort .Site.Data.glossary.main "begin_date" "desc"}}
+
+<!-- This is directly lifted from W3schools. Needs to be improved... -->
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("glossary");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("i")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for terms..">
+
+<br><br>
+
+<div class="glossary">
+    <ul id="glossary">
+    {{ range $terms }}
+
+    <li>
+
+      <i> {{ .definiendum }} </i>
+
+      <p> {{ .definiens }} </p>
+
+    </li>
+
+    {{ end }}
+
+    </ul>
+</div>

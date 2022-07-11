@@ -1,4 +1,7 @@
 # config.yaml
-baseURL: https://truthmakersemantics.github.io
+baseURL: https://truthmakersemantics.github.io/
 title: Truthmaker Semantics
-menu : ["main", "list"]
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,14 +1,14 @@
 ---
 title     : Publications
-subtitle  : Key publications
-teaser    : Search recent publications on truthmaker semantics.
-weight    : 500
-menu      : ["main"]
+weight    : 800
+teaser    : All the papers in tms
+menu      : main 
 ---
 
-On these pages, you can browse recent publications on truthmaker semantics.
+This site will contain a list of publications in tms
 
-## Key publications
+<input type="text" placeholder="Search..">
 
-{{< content/publications/list "key" >}}
+This doesn't do anything yet. We need to do some js+css magic to filter matching entries.
 
+<script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/truthmakersemantics/tms-bibliography/main/data/bib/tms.bib&jsonp=1"></script> 

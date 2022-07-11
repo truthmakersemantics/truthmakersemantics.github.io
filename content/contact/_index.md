@@ -1,8 +1,8 @@
 ---
 title     : Contact
-subtitle  : How to reach us!
-weight    : 600
-teaser    : How to get in touch and join us :)
+weight    : 700
+teaser    : Who we are...
 menu      : main 
 ---
-Follow the white rabbit!
+
+This site will contain information about the association for tms
