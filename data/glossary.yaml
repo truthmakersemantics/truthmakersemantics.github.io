@@ -4,7 +4,7 @@ main:
     definiens: |
       "A state is an exact truthmaker for a statement iff it necessitates the
       state while being wholly relevnt"
-    links: 
+    id: 1 
   - definiendum: State
     definiens: |
       "It is also important in applying the semantics to appreciate that the
@@ -20,7 +20,7 @@ main:
       a given statement true were it to obtain, not necessarily one that does
       make the statement true. From a purely mathematical point of view, we may
       take a state space to be an ordered"
-    links: 
+    id: 2 
   - definiendum: Loose truthmaking
     definiens: |
        "Loose verification is a purely modal notion. A state or situation s
@@ -29,3 +29,4 @@ main:
        and the statement not be true. Exact and inexact verification, by con-
        trast, require that there be a relevant connection between state and
        statement. With inexact"
+    id: 3

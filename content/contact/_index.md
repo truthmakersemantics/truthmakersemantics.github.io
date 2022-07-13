@@ -1,8 +1,8 @@
 ---
-title     : Contact
-weight    : 700
-teaser    : Who we are...
-menu      : main 
+title: Contact
+weight: 100
+about: How to reach the board and community
+menu: main 
 ---
 
-This site will contain information about the association for tms
+# Scientific Board

@@ -1,10 +1,10 @@
 ---
-title     : People
-weight    : 200
-teaser    : Who's who
-menu      : main 
+title: People
+weight: 30
+about: Who's working on truthmaker semantics?
+menu: main 
 ---
 
-Researchers working on truthmaker semantics. If you want to be included on this list get in touch!
-
+<div class="container-fluid">
 {{< researchers >}}
+<div>
