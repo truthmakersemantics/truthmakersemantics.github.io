@@ -1,19 +1,14 @@
-<section class="{{.Section}}">
-    <h2 class="preview_title">
-        <a href="{{ .Permalink }}" class="preview_link">
-            {{ .Title }}
-        </a>
-    </h2>
-    {{ with .Params.teaser }}
-    <p class="preview_teaser">
-        {{ . }}
-    </p>
-    {{ else }}
-    <p class="preview_summary">
-        {{ .Summary }}
-    </p>
-    {{ end }}
-    <a href="{{ .Permalink }}" class="preview_more">
-        ... more
-    </a>
-</section>
+<div class="card m-4 h-100 border-light text-dark">
+        <div class="card-header bg-white">
+          <h4><span class="badge bg-dark text-warning"> ⊩ </span> {{ .Title }}</h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+            {{ .Params.about }}
+            <a href="{{ .Permalink }}" class="">
+                <span class="">View more... </span>
+            </a>
+
+            </p>
+        </div>
+</div>

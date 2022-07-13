@@ -1,18 +1,14 @@
 {{ $events := sort .Site.Data.events.main "begin_date" "desc"}}
 
 <form action="">
-  <label>Show:</label>
   <select name="mode" id="mode">
     <option value="upcoming">Upcoming</option>
     <option value="archive">Archive</option>
   </select>
-  <br><br>
-  <input type="submit" value="Show">
 </form>
 
-[This doesn't work, just to illustrate the idea...]
+<div class="">
 
-<div class="events">
     <ul id="events-list">
     {{ range $events }}
 

@@ -1,14 +1,12 @@
 ---
-title     : Publications
-weight    : 800
-teaser    : All the papers in tms
-menu      : main 
+title: Publications
+weight: 80
+About: A comprehensive bibliography on truthmaker semantics.
+menu: main 
 ---
-
-This site will contain a list of publications in tms
 
 <input type="text" placeholder="Search..">
 
-This doesn't do anything yet. We need to do some js+css magic to filter matching entries.
+<!-- TODO Spinner while loading -->
 
-<script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/truthmakersemantics/tms-bibliography/main/data/bib/tms.bib&jsonp=1"></script> 
+<script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/truthmakersemantics/tms-bibliography/main/data/bib/tms.bib&jsonp=1&theme=simple&hidemenu=true"></script> 

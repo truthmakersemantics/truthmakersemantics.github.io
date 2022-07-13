@@ -1,10 +1,8 @@
 ---
-title     : Events
-teaser    : Find out about events on truthmaker semantics.
-weight    : 300
-menu      : ["main"]
+title: Events
+about: Current and past events in truthmaker semantics.
+weight: 30
+menu: ["main"]
 ---
-
-This page will contain a list of events
 
 {{< events >}}
