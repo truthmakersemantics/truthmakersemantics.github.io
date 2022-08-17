@@ -1,1 +1,8 @@
 public/
+
+
+.hugo_build.lock
+.scratch.md
+.tmuxp.yaml
+Session.vim*
+tags

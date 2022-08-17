@@ -1,8 +1,8 @@
 ---
-title     : Contact
-subtitle  : How to reach us!
-weight    : 600
-teaser    : How to get in touch and join us :)
-menu      : main 
+title: Contact
+weight: 100
+about: How to reach the board and community
+menu: main 
 ---
-Follow the white rabbit!
+
+# Scientific Board

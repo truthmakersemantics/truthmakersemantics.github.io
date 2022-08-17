@@ -1,10 +1,8 @@
 ---
-title     : Events
-subtitle  : Upcoming events
-teaser    : Find out about events on truthmaker semantics.
-weight    : 300
-menu      : ["main", "list"]
+title: Events
+about: Current and past events in truthmaker semantics.
+weight: 30
+menu: ["main"]
 ---
-Upcoming events:
 
-{{< content/events/list upcoming >}}
+{{< events >}}

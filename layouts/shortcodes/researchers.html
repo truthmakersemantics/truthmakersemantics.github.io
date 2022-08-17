@@ -1,0 +1,24 @@
+<!-- TODO Make this sort by last name (probably using index, haven't done this in a while) -->
+
+{{ $people := sort .Site.Data.people.main "affiliation" "desc"}}
+
+<div class="row gy-4 gx-4">
+    {{ range $people }}
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <a href="{{ .homepage}}" target="_blank" style="text-decoration:none;color:#212529">
+    <div class="card h-100" >
+      <img src="{{ .img }}" class="card-img-top" style="object-fit:cover; height:20vw" alt="Image of {{ range .name }}{{ .first }} {{ .last}}{{ end }}">
+      <div class="card-body">
+        <h5 class="card-title border-bottom border-warning border-5"> 
+          {{ range .name }}
+          {{ .first }} {{ .last}}
+          {{ end }}
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ .affiliation }} </h6>
+      </div>
+    </div>
+    </a>
+    </div>
+    {{ end }}
+
+</div>

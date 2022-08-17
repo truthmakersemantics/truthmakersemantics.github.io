@@ -1,7 +1,8 @@
 ---
-title     : News
-weight    : 200
-menu      : main
+title: News
+weight: 20
+about: The latest updates on the world of truthmaker semantics.
+menu: main 
 ---
-+ Some recent news
-+ Some more news
+
+This site will contain news (automatically list all the recent changes to the website).

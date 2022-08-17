@@ -1,4 +1,6 @@
 ---
 title: Truthmaker Semantics
+teaser: |
+    "A new philosophical approach to questions about meaning, with applications in logic and philosophy of language."
 ---
-Hi there! On this page you can find out more about truthmaker semantics.
+

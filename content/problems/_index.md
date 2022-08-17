@@ -1,7 +1,8 @@
 ---
-title     : Open Problems
-teaser    : Find out what we're working 
-weight    : 400
-menu      : main
+title: Problems
+weight: 40
+about: Selected open problems in truthmaker semantics.
+menu: main 
 ---
-Here are some open problems
+
+This site will contain a list of some important open problems in tms.
