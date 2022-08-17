@@ -1,8 +1,8 @@
 ---
-title: Getting started
+title: Start
 weight: 10
 about: Some pointers on truthmaker semantics.
-menu: main 
+menu: main
 ---
 
 ## What is truthmaker semantics?

@@ -1,0 +1,144 @@
+/*
+
+dark border background #252527
+background: ##F2F2F2
+cyan highlight: #17C8CE
+greys: #D0D5D5, #ABB4B6
+text: #1D2326
+linear-gradient(#D0D5D5, #ABB4B6);
+*/
+
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500,600,700";
+
+
+:root {
+  --background: #111111;
+  --text: #dddddd;
+  --links: #fcba03;
+  --greytext: #aaaaaa;
+}
+
+html{background-color: var(--background);color:var(--text)}
+
+body{
+  background-color: var(--background);color:var(--text);
+  font-family:"Roboto",sans-serif;
+  -webkit-font-smoothing:antialiased
+}
+
+h1,h2,h3,h4,h5,h6{font-weight:500;}
+
+.title {
+    font-size:5em;
+    font-weight:600;
+    line-height: 0.85em;
+    letter-spacing: -3px;
+    padding: 0.5em 0 0.5em 0;
+    border-top: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+    margin-bottom:0.5em;
+    }
+
+.box h4 {
+  font-size:1.3em;
+  }
+
+p {font-size:0.9em;}
+
+p.small {font-size:0.8em;}
+
+.four-square {margin-bottom: 2em;}
+
+p.dropcaps::first-letter {
+  color: var(--links);
+  float: left;
+  font-size: 3.25em;
+  margin: -0.03em 0.02em -0.2em 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--links);
+  background-color: var(--background);
+}
+
+a:hover {
+  color: var(--background);
+  background-color: var(--links);
+}
+
+.link-secondary {
+  font-size:0.9em;
+  color: var(--text)!important;
+  }
+
+.box-header {
+    border-bottom: 1px solid var(--text);
+    height:3em;
+    margin-bottom: 0.5em;
+  }
+
+.box-body {}
+
+.menu-title {
+  padding: 10px 30px 0 0;
+  text-align: right;
+  font-size:2em;
+  font-weight:600;
+  line-height: 0.85em;
+  letter-spacing: -3px;
+}
+
+a.menu-title {
+  text-decoration: none;
+  color: var(--text);
+}
+
+a.menu-title:hover {
+  color: var(--links);
+  background-color: var(--background);
+}
+
+.menu-inner {
+  padding: 5px 0 5px 0;
+  display: none;
+}
+
+.menu-item {display: float;}
+
+.footer {
+  background-color: var(--background);
+  }
+
+.foot-grid {
+  border-top: 1px solid var(--text);
+  margin: 1em 0 1em 0;
+  padding: 1em 0 0 0;
+}
+
+.fa {
+  color: var(--text);
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 2em;
+  background-color: var(--text);
+  margin: 0 5px 5px 0;
+}
+
+.copyright p {
+    color: var(--greytext);
+    font-size:0.7em;
+}
+
+/*.box {background-color: rgba(255, 255, 255, 0.1);}
+
+div[class^="col-"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: 1px dashed rgba(255, 255, 255, 0.25);
+}
