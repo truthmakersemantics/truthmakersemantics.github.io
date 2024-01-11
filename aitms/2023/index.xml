@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Truthmaker Semantics</title>
-    <link>https://truthmakersemantics.github.io/</link>
-    <description>Recent content on Truthmaker Semantics</description>
+    <title>2023 on Truthmaker Semantics</title>
+    <link>https://truthmakersemantics.github.io/aitms/2023/</link>
+    <description>Recent content in 2023 on Truthmaker Semantics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://truthmakersemantics.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://truthmakersemantics.github.io/aitms/2023/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Abstracts</title>
       <link>https://truthmakersemantics.github.io/aitms/2023/abstracts/</link>
@@ -20,13 +20,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://truthmakersemantics.github.io/aitms/2023/pictures/</guid>
       <description>Attendants (left to right): 1st row: Vita Saitta, Maria Beatrice Buonaguidi, Mark Jago, Hüseyin Güngör, Daniel Rothschild, Stephan Krämer, Martín Abreu Zavaleta, Samuel Elgin.&#xA;2nd row: Ethan Russo, Cornelia Mayer, Federico Faroldi, Johannes Korbmacher, Simone Picenni, Lisa Vogt, Pierre Saint-Germier, Giuliano Rosella, Kit Fine.&#xA;3rd row: Peter Verdee, Jonathan Caleb Kendrick, Justin Bleedin, Antonio Freiles, Lucas Champollion, Soren Schlassa Giorgio Lenta, Cyan Dorr, Samuel Rogers, Alec Oakley.&#xA;Not in the picture: Fabrice Correia, Hannes Leitgeb, Erica Shumener Kit Fine opening the conference.</description>
-    </item>
-    <item>
-      <title>Announcement</title>
-      <link>https://truthmakersemantics.github.io/aitms/2025/announcement/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://truthmakersemantics.github.io/aitms/2025/announcement/</guid>
-      <description>The 2025 AiTMS will likely take place at Syracuse University, NY.</description>
     </item>
   </channel>
 </rss>

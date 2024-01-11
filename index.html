@@ -1,275 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-	<meta name="generator" content="Hugo 0.101.0" />
-        <meta charset="UTF-8">
-        <meta name="description"
-              content="Truthmaker Semantics">
-        <meta name="author"
-              content="The Truthmakers">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0, user-scalable=yes">
-        <title>Truthmaker Semantics</title>
-        <link rel="icon"
-              type="image/png"
-              href="data:image/png;base64,">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link href="/static/css/custom.css" rel="stylesheet">
-        
-        
-        
-    </head>
-    <body class="bg-white-50">
+  <head>
+	<meta name="generator" content="Hugo 0.121.2">
+    <meta charset="UTF-8">
+    <meta name="description"
+      content="Truthmaker Semantics">
+    <meta name="author"
+      content="The Truthmakers">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Truthmaker Semantics</title>
+    <link rel="icon"
+      type="image/png"
+      href="data:image/png;base64,">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="/css/custom.css" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/1d773f205f.js" crossorigin="anonymous"></script>
+    <script src="/js/nav.js"></script>
 
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid px-5">
-                <a class="navbar-brand mb-2" href="/">Truthmaker<span class="text-warning"> ⊩ </span> Semantics</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/begin/">Getting started</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/news/">News</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/events/">Events</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/people/">People</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/problems/">Problems</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/glossary/">Glossary</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/publications/">Publications</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/aitms/">AiTMS</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/resources/">Resources</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/contact/">Contact</a></li>
-                                           
-                    </ul>
-                </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+<script>
+  let macros = {
+
+    '\\ETM': '{\\mathrel{\\small\\mkern5pt\\mathclap{\\parallel}{-}}\\mkern2pt}',
+    '\\EFM': '{\\mathrel{\\small\\mkern2pt{-}\\mathclap{\\parallel}}\\mkern5pt}',
+    '\\ITM': '{\\mathrel{\\small\\mkern5pt\\mathclap{\\parallel}{>}}\\mkern2pt}',
+    '\\IFM': '{\\mathrel{\\small\\mkern2pt{<}\\mathclap{\\parallel}}\\mkern5pt}',
+
+
+ };
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false}
+            ],
+            macros: macros,
+        });
+    });
+</script>
+<style>
+ 
+</style>
+
+    
+    
+    
+  </head>
+  <body>
+
+    
+  <nav class="header navbar sticky-top">
+    <div class="container-fluid px-5">
+      <div class="container-sm">
+        <div class="container-sm">
+          <a class="menu-title header-TMS" href="/"> ⊩ </a>
+          <a id="showNavButton" class="menu-title menu-button" onclick="toggleNav(true,'myNav','showNavButton','hideNavButton')"><i class="fa-solid fa-angles-down"></i></a>
+          <a id="hideNavButton" class="menu-title menu-button" onclick="toggleNav(false,'myNav','showNavButton','hideNavButton')"><i class="fa-solid fa-angles-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="myNav" class="overlay">
+    
+    <div class="overlay-content">
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/people/">People</a>
+        </div>
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/aitms/">AiTMS</a>
+        </div>
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/publications/">Publications</a>
+        </div>
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/contact/">Contact</a>
+        </div>
+      
+    </div>
+  </div>
+
+
+    <header class="container-sm">
+      <div class="container-sm">
+        <div class="row gy-4 gx-0">
+          <div class="col-lg-6">
+            <div class="my-2">
+              
+<p class="title">Truthmaker Semantics</p>
+
             </div>
-        </nav>
-
-        <header class="bg-dark py-1">
-            <div class="container px-2">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center my-2">
-
-                            <h4 class="fw-bolder text-white mb-2">Truthmaker Semantics</h4>
-                            <p class="text-white-50 mb-4">
-                            <i>
-                                
-                            </i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section class="container py-5" id="content">
-            
-
-
-<div class="container-sm ">
-<div class="row gy-4 gx-0">
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Getting started</h4>
+          </div>
         </div>
-        <div class="card-body">
-            <p class="card-text">
-            Some pointers on truthmaker semantics.
-            <a href="https://truthmakersemantics.github.io/begin/" class="">
-                <span class="">View more... </span>
-            </a>
+      
 
-            </p>
-        </div>
-</div>
+
+
+      
+      
+      </div>
+    </header>
+
+    <section class="container py-1" id="content">
+      
+
+
+
+<div class="container-sm">
+  <div class="row gy-3 gx-4">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="four-square">
+        <p class="dropcaps">
+          <b>
+            Truthmaker semantics is a new and exciting approach to semantics,
+            with applications in logic, philosophy, and linguistics.
+          </b>
+        </p>
+
+        <p>
+          Contemporary philosophical semantics is riddled with <em>anomalies</em>,
+          that is: logical and semantic phenomena that the prevailing
+          possible-worlds account struggles to explain. The anomalies in question
+          arise when two equivalent propositions behave in logically dissimilar
+          ways. This happens, for example, when we're giving metaphysical
+          explanations <a
+            href="http://dx.doi.org/10.1017/CBO9781139149136.002">(Fine
+            2012a)</a>, when we're reasoning about counterfactual situations <a
+            href="http://dx.doi.org/10.5840/jphil201210938">(Fine 2012b)</a>, or
+          when we're giving certain kinds of permissions <a
+            href="http://dx.doi.org/10.1111/1746-8361.12068">(Fine 2014)</a>. This
+          phenomenon is known in the literature as &laquo;<a
+            href="https://plato.stanford.edu/entries/hyperintensionality/">hyperintensionality</a>&raquo;.
+          It presents a <em>deep problem</em> for the possible-worlds paradigm,
+          which treats equivalent propositions as interchangeable.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+           <p>
+        Truthmaker semantics solves the logical and semantic problems arising
+        from hyperintensionality by analyzing truth in a more careful and
+        nuanced way than possible-worlds semantics. Rather than just looking at
+        the collection of worlds where a given proposition is true, truthmaker
+        semantics asks <em>why</em> the proposition is true in those worlds.
+        This results in a rich and fruitful semantic framework, which has found
+        many applications in logic, philosophy, and linguistics <a
+          href="http://dx.doi.org/10.1002/9781118972090.ch22">(Fine 2016)</a>.
+      </p>
+
+      <p>
+        This website is intended as a hub for researchers of all colors
+        that want to learn more about truthmaker semantics. It's not much yet,
+        but it is under active development. Please
+        <a href="/contact/">
+          <i class="fa fa-envelope fa-xs"></i>contact
+        </a>
+        the maintainers if you'd like to contribute or know more.
+      </p>
 
     </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> News</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            The latest updates on the world of truthmaker semantics.
-            <a href="https://truthmakersemantics.github.io/news/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
+  </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    <footer class="fixed-bottom d-none d-md-block py-0 footer">
+      
+
+<div class="container-sm">
+  <div class="container-sm">
+    <div class="row gy-0 gx-4 foot-grid">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <a href="https://www.youtube.com/channel/UCloxctCq_5RCfRnYf1LuPyg" class="fa fa-youtube" target="_blank"></a>
+        <a href="https://github.com/truthmakersemantics" class="fa fa-github" target="_blank"></a>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <h6>Supported by</h6>
+        <img src="/img/footer/NYUlogo.png" class="logo" alt="NYU">
+        <img src="/img/footer/UoNlogo.png" class="logo" alt="UoN">
+        <img src="/img/footer/UUlogo.png" class="logo" alt="UU">
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <div class="copyright">
+          <p>Site maintained by Johannes Korbmacher & Mark Jago</p>
+          <p>&copy; The Truthmakers, 2023</p>
+          </div>
+      </div>
     </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Events</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            Current and past events in truthmaker semantics.
-            <a href="https://truthmakersemantics.github.io/events/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> People</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            Who&#39;s working on truthmaker semantics?
-            <a href="https://truthmakersemantics.github.io/people/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Problems</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            Selected open problems in truthmaker semantics.
-            <a href="https://truthmakersemantics.github.io/problems/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Glossary</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            Technical terms defined and explained.
-            <a href="https://truthmakersemantics.github.io/glossary/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Publications</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            A comprehensive bibliography on truthmaker semantics.
-            <a href="https://truthmakersemantics.github.io/publications/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> AiTMS</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            Advances in Truthmaker Semantics - annual conference
-            <a href="https://truthmakersemantics.github.io/aitms/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Resources</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            Technical resources to help write papers in truthmaker semantics.
-            <a href="https://truthmakersemantics.github.io/resources/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> Contact</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            How to reach the board and community
-            <a href="https://truthmakersemantics.github.io/contact/" class="">
-                <span class="">View more... </span>
-            </a>
-
-            </p>
-        </div>
-</div>
-
-    </div>
-    
-</div>
+  </div>
 </div>
 
 
-        </section>
-
-        <footer class="bg-dark text-secondary fixed-bottom py-2">
-            <div class="container px-5"><p class="m-0 text-center text-white-50"></i>Copyright &copy; the truthmakers 2022</i></p></div>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-            
-            
-        </footer>
-    </body>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    </footer>
+  </body>
 </html>

@@ -1,93 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description"
-              content="Truthmaker Semantics">
-        <meta name="author"
-              content="The Truthmakers">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0, user-scalable=yes">
-        <title>Truthmaker Semantics</title>
-        <link rel="icon"
-              type="image/png"
-              href="data:image/png;base64,">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link href="/static/css/custom.css" rel="stylesheet">
-        
-        
-        
-    </head>
-    <body class="bg-white-50">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description"
+      content="Truthmaker Semantics">
+    <meta name="author"
+      content="The Truthmakers">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Truthmaker Semantics</title>
+    <link rel="icon"
+      type="image/png"
+      href="data:image/png;base64,">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="/css/custom.css" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/1d773f205f.js" crossorigin="anonymous"></script>
+    <script src="/js/nav.js"></script>
 
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid px-5">
-                <a class="navbar-brand mb-2" href="/">Truthmaker<span class="text-warning"> ⊩ </span> Semantics</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/begin/">Getting started</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/news/">News</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/events/">Events</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/people/">People</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/problems/">Problems</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/glossary/">Glossary</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/publications/">Publications</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/aitms/">AiTMS</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/resources/">Resources</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link link-secondary" href="/contact/">Contact</a></li>
-                                           
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    
+    
+    
+    
+  </head>
+  <body>
 
-        <header class="bg-dark py-1">
-            <div class="container px-2">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center my-2">
-
-                            <h4 class="fw-bolder text-white mb-2">Tags</h4>
-                            <p class="text-white-50 mb-4">
-                            <i>
-                                
-                            </i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section class="container py-5" id="content">
-            
-
-    <div class="container-fluid">
-
-        
-
+    
+  <nav class="header navbar sticky-top">
+    <div class="container-fluid px-5">
+      <div class="container-sm">
+        <div class="container-sm">
+          <a class="menu-title header-TMS" href="/"> ⊩ </a>
+          <a id="showNavButton" class="menu-title menu-button" onclick="toggleNav(true,'myNav','showNavButton','hideNavButton')"><i class="fa-solid fa-angles-down"></i></a>
+          <a id="hideNavButton" class="menu-title menu-button" onclick="toggleNav(false,'myNav','showNavButton','hideNavButton')"><i class="fa-solid fa-angles-up"></i></a>
+        </div>
+      </div>
     </div>
+  </nav>
+  
+  <div id="myNav" class="overlay">
+    
+    <div class="overlay-content">
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/people/">People</a>
+        </div>
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/aitms/">AiTMS</a>
+        </div>
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/publications/">Publications</a>
+        </div>
+      
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="/contact/">Contact</a>
+        </div>
+      
+    </div>
+  </div>
 
 
-        </section>
+    <header class="container-sm">
+      <div class="container-sm">
+        <div class="row gy-4 gx-0">
+          <div class="col-lg-6">
+            <div class="my-2">
+              
+<p class="title">Truthmaker Semantics</p>
 
-        <footer class="bg-dark text-secondary fixed-bottom py-2">
-            <div class="container px-5"><p class="m-0 text-center text-white-50"></i>Copyright &copy; the truthmakers 2022</i></p></div>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+            </div>
+          </div>
+        </div>
+      
+
+
+  <ul class="navbar-nav sub-sec-nav">
+    
+      <li class="nav-item">
+        
+        <a href="javascript:void(0)" class="nav-link toggle-link nav-line nav-button ">
+          People
+          
+        </a>
+        
+          <div class="sub-sections" style="display: none;">
+            <ul class="no-bullets">
             
+            </ul>
+          </div>
+        
+      </li>
+    
+      <li class="nav-item">
+        
+        <a href="javascript:void(0)" class="nav-link toggle-link nav-line nav-button ">
+          AiTMS
+          
+            <i class="fa-solid fa-angles-down"></i>
+          
+        </a>
+        
+          <div class="sub-sections" style="display: none;">
+            <ul class="no-bullets">
             
-        </footer>
-    </body>
+              <li class="nav-item">
+                <a href="/aitms/2023/" class="nav-link nav-line nav-button ">2023</a>
+              </li>
+            
+              <li class="nav-item">
+                <a href="/aitms/2025/" class="nav-link nav-line nav-button ">2025</a>
+              </li>
+            
+            </ul>
+          </div>
+        
+      </li>
+    
+      <li class="nav-item">
+        
+        <a href="javascript:void(0)" class="nav-link toggle-link nav-line nav-button ">
+          Publications
+          
+        </a>
+        
+          <div class="sub-sections" style="display: none;">
+            <ul class="no-bullets">
+            
+            </ul>
+          </div>
+        
+      </li>
+    
+      <li class="nav-item">
+        
+        <a href="javascript:void(0)" class="nav-link toggle-link nav-line nav-button ">
+          Contact
+          
+        </a>
+        
+          <div class="sub-sections" style="display: none;">
+            <ul class="no-bullets">
+            
+            </ul>
+          </div>
+        
+      </li>
+    
+  </ul>
+
+
+      
+      
+      </div>
+    </header>
+
+    <section class="container py-1" id="content">
+      
+  <div class="container-fluid">
+      
+  </div>
+
+    </section>
+
+    <footer class="fixed-bottom d-none d-md-block py-0 footer">
+      
+
+<div class="container-sm">
+  <div class="container-sm">
+    <div class="row gy-0 gx-4 foot-grid">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <a href="https://www.youtube.com/channel/UCloxctCq_5RCfRnYf1LuPyg" class="fa fa-youtube" target="_blank"></a>
+        <a href="https://github.com/truthmakersemantics" class="fa fa-github" target="_blank"></a>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <h6>Supported by</h6>
+        <img src="/img/footer/NYUlogo.png" class="logo" alt="NYU">
+        <img src="/img/footer/UoNlogo.png" class="logo" alt="UoN">
+        <img src="/img/footer/UUlogo.png" class="logo" alt="UU">
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+        <div class="copyright">
+          <p>Site maintained by Johannes Korbmacher & Mark Jago</p>
+          <p>&copy; The Truthmakers, 2023</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    </footer>
+  </body>
 </html>

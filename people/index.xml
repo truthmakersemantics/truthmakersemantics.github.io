@@ -4,6 +4,8 @@
     <title>People on Truthmaker Semantics</title>
     <link>https://truthmakersemantics.github.io/people/</link>
     <description>Recent content in People on Truthmaker Semantics</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://truthmakersemantics.github.io/people/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://truthmakersemantics.github.io/people/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
