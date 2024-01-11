@@ -1,9 +1,9 @@
+{{ define "page-title" }}
+<p class="title">{{ .FirstSection.Title }}{{ if not (eq .FirstSection .CurrentSection) }}<i class="fa fa-angle-right fa-xs"></i>{{ .CurrentSection.Title }}{{ end }}</p>
+{{ end }}
+
 {{ define "main" }}
-
-    <div class="container-fluid">
-
-        {{ .Content }}
-
-    </div>
-
+  <div class="container-fluid">
+      {{ .Content }}
+  </div>
 {{ end }}

@@ -1,3 +1,7 @@
+{{ define "page-title" }}
+<p class="title">{{ .FirstSection.Title }}</p>
+{{ end }}
+
 {{ define "main" }}
 
 {{ .Content }}
@@ -25,7 +29,7 @@
             href="http://dx.doi.org/10.5840/jphil201210938">(Fine 2012b)</a>, or
           when we're giving certain kinds of permissions <a
             href="http://dx.doi.org/10.1111/1746-8361.12068">(Fine 2014)</a>. This
-          phenomenon is known in the literature as &laquo; <a
+          phenomenon is known in the literature as &laquo;<a
             href="https://plato.stanford.edu/entries/hyperintensionality/">hyperintensionality</a>&raquo;.
           It presents a <em>deep problem</em> for the possible-worlds paradigm,
           which treats equivalent propositions as interchangeable.
@@ -49,23 +53,25 @@
       <p>
         This website is intended as a hub for researchers of all colors
         that want to learn more about truthmaker semantics. It's not much yet,
-        but it is under active development. Please <a
-          href="/contact">contact</a> the maintainers if you'd like to
-        contribute or know more.
+        but it is under active development. Please
+        <a href="/contact/">
+          <i class="fa fa-envelope fa-xs"></i>contact
+        </a>
+        the maintainers if you'd like to contribute or know more.
       </p>
 
     </div>
   </div>
 </div>
 
-<div class="container-sm">
-  <div class="row gy-3 gx-4">
-    {{ range .Data.Pages.ByWeight }}
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    {{ .Render "preview" }}
-    </div>
-    {{ end }}
-  </div>
-</div>
+{{/* <div class="container-sm"> */}}
+{{/*   <div class="row gy-3 gx-4"> */}}
+{{/*     {{ range .Data.Pages.ByWeight }} */}}
+{{/*     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"> */}}
+{{/*     {{ .Render "preview" }} */}}
+{{/*     </div> */}}
+{{/*     {{ end }} */}}
+{{/*   </div> */}}
+{{/* </div> */}}
 
 {{ end }}

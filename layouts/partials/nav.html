@@ -1,49 +1,24 @@
 {{ define "nav" }}
-
-
-
-
-<!--<nav class="header navbar sticky-top navbar-expand-md navbar-dark">-->
-<nav class="header navbar sticky-top">
+  <nav class="header navbar sticky-top">
     <div class="container-fluid px-5">
       <div class="container-sm">
-        <!--<a class="navbar-brand mb-2" href="/">Truthmaker<span class="text-warning"> ⊩ </span> Semantics</a>-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>-->
-        <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                {{range .Site.Menus.main }}
-                <li class="nav-item"><a class="nav-link link-secondary" href="{{.URL}}">{{ .Title }}</a></li>
-                {{ end }}
-            </ul>
-        </div>-->
-
-
-
-
-
         <div class="container-sm">
-                <a class="menu-title header-TMS" href="/"> ⊩ </a>
-                <a id="showNavButton" class="menu-title menu-button" onclick="openNav()"><i class="fa-solid fa-angles-down"></i></a>
-                <a id="hideNavButton" class="menu-title menu-button" onclick="closeNav()"><i class="fa-solid fa-angles-up"></i></a>
+          <a class="menu-title header-TMS" href="/"> ⊩ </a>
+          <a id="showNavButton" class="menu-title menu-button" onclick="toggleNav(true,'myNav','showNavButton','hideNavButton')"><i class="fa-solid fa-angles-down"></i></a>
+          <a id="hideNavButton" class="menu-title menu-button" onclick="toggleNav(false,'myNav','showNavButton','hideNavButton')"><i class="fa-solid fa-angles-up"></i></a>
         </div>
       </div>
     </div>
-</nav>
-
-
-<!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    {{range .Site.Menus.main }}
-      <div class="menu-item">
-      <a class="nav-link link-secondary" href="{{.URL}}">{{ .Title }}</a>
-      </div>
-    {{ end }}
+  </nav>
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      {{range .Site.Menus.main }}
+        <div class="menu-item">
+        <a class="nav-link link-secondary" href="{{.URL}}">{{ .Title }}</a>
+        </div>
+      {{ end }}
+    </div>
   </div>
-
-</div>
-
-
 {{ end }}

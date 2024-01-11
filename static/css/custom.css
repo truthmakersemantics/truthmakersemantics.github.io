@@ -1,12 +1,11 @@
 /*
-
 dark border background #252527
 background: ##F2F2F2
 cyan highlight: #17C8CE
 greys: #D0D5D5, #ABB4B6
 text: #1D2326
 linear-gradient(#D0D5D5, #ABB4B6);
-*/
+ */
 
 @import "https://fonts.googleapis.com/css?family=Roboto:400,500,600,700";
 
@@ -18,11 +17,15 @@ linear-gradient(#D0D5D5, #ABB4B6);
   --greytext: #aaaaaa;
 }
 
-html{background-color: var(--background);color:var(--text)}
+html{
+background-color: var(--background);
+color:var(--text)
+}
 
 body{
-  padding-bottom: 120px;
+  padding-bottom: 240px;
   background-color: var(--background);color:var(--text);
+  font-size: 1.5em;
   font-family:"Roboto",sans-serif;
   -webkit-font-smoothing:antialiased
 }
@@ -31,30 +34,49 @@ body{
   margin: auto;
 }
 
+.summary {
+  fint-size:12;
+}
+
 h1,h2,h3,h4,h5,h6{font-weight:500;}
 
 .title {
-    font-size:3em;
-    font-weight:600;
-    line-height: 0.9em;
-    letter-spacing: -2px;
-    padding: 0.5em 0 0.5em 0;
-    border-top: 1px solid var(--text);
-    border-bottom: 1px solid var(--text);
-    margin-bottom:0.5em;
-    }
+  font-size:3em;
+  font-weight:600;
+  line-height: 0.9em;
+  letter-spacing: -2px;
+  padding: 0.5em 0 0.5em 0;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  margin-bottom:0em;
+}
+
+.sub-sec-nav {
+  font-size:2em;
+  font-weight:600;
+  line-height: 0.9em;
+  letter-spacing: -2px;
+  padding: 0 0 0.5em 0;
+  /* border-top: 1px solid var(--text); */
+  border-bottom: 1px solid var(--text);
+  margin-bottom: 1em;
+}
+
+.no-bullets {
+  list-style-type: none; /* Remove bullets */
+}
 
 @media only screen and (min-width: 576px) {
   .title {
     font-size: 5em;
     line-height: 0.85em;
     letter-spacing: -3px;
-    }
   }
+}
 
 .box h4 {
   font-size:1.3em;
-  }
+}
 
 p {font-size:0.9em;}
 
@@ -81,16 +103,18 @@ a:hover {
   background-color: var(--links);
 }
 
+
+
 .link-secondary {
   font-size:0.9em;
   color: var(--text)!important;
-  }
+}
 
 .box-header {
-    border-bottom: 1px solid var(--text);
-    height:3em;
-    margin-bottom: 0.5em;
-  }
+  border-bottom: 1px solid var(--text);
+  height:3em;
+  margin-bottom: 0.5em;
+}
 
 .box-body {}
 
@@ -98,7 +122,7 @@ a:hover {
 
 .header {
   background-color: var(--background);
-  }
+}
 
 .menu-title {}
 
@@ -119,70 +143,88 @@ a.menu-title:hover {
   margin-top: 0px;
 }
 
+a.nav-line {
+  text-decoration: none;
+  color: var(--text);
+}
+
+a.nav-line:hover {
+  color: var(--links);
+  background-color: var(--background);
+}
+
+.nav-link.nav-line.nav-button.active {
+    color: var(--links); /* Replace with your desired color */
+}
+
+.nav-button {
+  padding: 15px 0px 0 0;
+  /* font-size:2em; */
+  /* float: right; */
+  margin-top: 0px;
+}
+
+
+
 #hideNavButton {display: none;}
 
 .header-TMS {
   font-size:3em !important;
   font-weight:600;
-  }
+}
 
-  /* Menu Overlay */
+/* Menu Overlay */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(17,17,17);
+  background-color: rgba(17,17,17, 0.9);
+  overflow-y: hidden; /* Disable horizontal scroll */
+  transition: 0.5s;
+}
+
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size:1em;
+  font-weight: 500;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1em;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+@media only screen and (min-width: 576px) {
   .overlay {
-    height: 0;
-    width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(17,17,17);
-    background-color: rgba(17,17,17, 0.9);
-    overflow-y: hidden; /* Disable horizontal scroll */
-    transition: 0.5s;
+    width: 50%;
+    left: 50%;
   }
-
-
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    font-size:1em;
-    font-weight: 500;
-  }
-
-  /* The navigation links inside the overlay */
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 1em;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-  }
-
-  @media only screen and (min-width: 576px) {
-    .overlay {
-      width: 50%;
-      left: 50%;
-      }
-    .overlay-content {font-size:1.3em;}
-    }
+  .overlay-content {font-size:1.3em;}
+}
 
 /* FOOTER */
 
 .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 114px;
   background-color: var(--background);
-  }
+}
 
 .foot-grid {
   border-top: 1px solid var(--text);
-  margin: 0 0 1em 0;
+  margin: 0 0 2em 0;
   padding: 1em 0 0 0;
 }
 
@@ -194,6 +236,19 @@ a.menu-title:hover {
   text-decoration: none;
 }
 
+a .fa {
+  /* color: var(--text); */
+  padding: 0.5em;
+  /* font-size: 2em; */
+  /* text-align: center; */
+  text-decoration: none;
+}
+
+a:hover .fa {
+    color: var(--background)
+}
+
+
 
 .logo {
   height: 2em;
@@ -202,13 +257,73 @@ a.menu-title:hover {
 }
 
 .copyright p {
-    color: var(--greytext);
-    font-size:0.7em;
+  color: var(--greytext);
+  font-size:0.7em;
 }
 
-/*.box {background-color: rgba(255, 255, 255, 0.1);}
 
-div[class^="col-"] {
-    background-color: rgba(255, 255, 255, 0.1);
-    outline: 1px dashed rgba(255, 255, 255, 0.25);
+.horizontal-menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
+
+.horizontal-menu a {
+  margin-right: 20px; /* Space between menu items */
+  text-decoration: none;
+  color: #17C8CE; /* Normal link color */
+}
+
+.horizontal-menu a.active {
+  font-weight: bold;
+  color: #D0D5D5; /* Active link color */
+}
+
+
+.toggle-button {
+    color: var(--text); /* Replace with your desired text color */
+    background-color: var(--background); /* Replace with your desired background color */
+    /* padding: 10px; /* Optional: for better spacing */ */
+    /* border-radius: 5px; /* Optional: for rounded corners */ */
+    display: inline-block; /* To apply padding and border-radius */
+    text-decoration: none; /* To remove underline from the link */
+}
+
+.toggle-button:hover {
+    color: var(--links); /* Color on hover */
+    background-color: var(--background); /* Background color on hover */
+}
+
+#toggleIcon-mon {
+    color: var(--text); /* Color of the icon */
+}
+
+.toggle-button:hover #toggleIcon-mon {
+    color: var(--links); /* Color of the icon on hover */
+}
+
+#toggleIcon-tue {
+    color: var(--text); /* Color of the icon */
+}
+
+.toggle-button:hover #toggleIcon-tue {
+    color: var(--links); /* Color of the icon on hover */
+}
+
+#toggleIcon-wed {
+    color: var(--text); /* Color of the icon */
+}
+
+.toggle-button:hover #toggleIcon-wed {
+    color: var(--links); /* Color of the icon on hover */
+}
+
+.researcher {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.card-body {
+    background-color: transparent;
+}
+

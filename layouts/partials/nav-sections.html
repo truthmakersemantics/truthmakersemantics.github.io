@@ -1,0 +1,29 @@
+{{ define "nav-sections"}}
+
+{{ if and (not .IsHome) ( .FirstSection.Pages ) }}
+  <ul class="navbar-nav sub-sec-nav">
+    {{ range .FirstSection.Pages }}
+      <li class="nav-item">
+        {{/* <a href="{{ .RelPermalink }}" class="nav-link toggle-link nav-line nav-button {{ if eq .RelPermalink $.RelPermalink }}active{{ end }}"> */}}
+        <a href="javascript:void(0)" class="nav-link toggle-link nav-line nav-button {{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">
+          {{ .Title }}
+          {{ if gt (len .Pages) 0}}
+            <i class="fa-solid fa-angles-down"></i>
+          {{ end }}
+        </a>
+        {{ if .IsSection }}
+          <div class="sub-sections" style="display: none;">
+            <ul class="no-bullets">
+            {{ range .Pages }}
+              <li class="nav-item">
+                <a href="{{ .RelPermalink }}" class="nav-link nav-line nav-button {{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+{{ end }}

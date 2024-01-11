@@ -1,6 +1,6 @@
 ---
 title: Contact
-weight: 100
+weight: 999
 about: How to reach us.
 menu: main 
 ---
