@@ -1,14 +1,14 @@
-<div class="card m-4 h-100 border-light text-dark">
-        <div class="card-header bg-white">
-          <h4><span class="badge bg-dark text-warning"> ⊩ </span> {{ .Title }}</h4>
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            {{ .Params.about }}
-            <a href="{{ .Permalink }}" class="">
-                <span class="">View more... </span>
-            </a>
+<div class="box">
+  <div class="box-header">
+    <h4> {{ .Title }}</h4>
+  </div>
+  <div class="box-body">
+    <p>
+      {{ .Params.about }}
+      <a href="{{ .Permalink }}" class="">
+        <span class="">[&nbsp;More&nbsp;] </span>
+      </a>
 
-            </p>
-        </div>
+    </p>
+  </div>
 </div>

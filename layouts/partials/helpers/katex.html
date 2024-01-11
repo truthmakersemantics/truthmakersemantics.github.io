@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+<script>
+  let macros = {
+
+    '\\ETM': '{\\mathrel{\\small\\mkern5pt\\mathclap{\\parallel}{-}}\\mkern2pt}',
+    '\\EFM': '{\\mathrel{\\small\\mkern2pt{-}\\mathclap{\\parallel}}\\mkern5pt}',
+    '\\ITM': '{\\mathrel{\\small\\mkern5pt\\mathclap{\\parallel}{>}}\\mkern2pt}',
+    '\\IFM': '{\\mathrel{\\small\\mkern2pt{<}\\mathclap{\\parallel}}\\mkern5pt}',
+
+
+ };
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false}
+            ],
+            macros: macros,
+        });
+    });
+</script>
+<style>
+/* .mrel { font-size: .8em; } */
+</style>

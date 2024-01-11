@@ -1,12 +1,10 @@
-{{ define "header" }}
-    <h1 class="header_title">
-        {{ .FirstSection.Title }}
-    </h1>
-    <h2 class="header_subtitle">
-        {{ .CurrentSection.Title}} - {{ .Title }}
-    </h2>
+{{ define "page-title" }}
+<p class="title">{{ .FirstSection.Title }}{{ if not (eq .FirstSection .CurrentSection) }}<i class="fa fa-angle-right fa-xs"></i>{{ .CurrentSection.Title }}{{ end }}<i class="fa fa-angle-right fa-xs"></i> {{ .Title }}
+</p>
 {{ end }}
 
 {{ define "main" }}
-    {{ .Content }}
+  <div class="container-fluid">
+      {{ .Content }}
+  </div>
 {{ end }}

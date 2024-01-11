@@ -1,24 +1,19 @@
 main:
 
-
-- name: 
-  - first: Kit
-    last:  Fine
+- first: Kit
+  last:  Fine
   affiliation: NYU
   homepage:    "https://as.nyu.edu/faculty/kit-fine.html"
-  img: "/img/kit.jpg"
+  img: "/img/people/kit.jpg"
 
-
-- name: 
-  - first: Mark
-    last:  Jago
+- first: Mark
+  last:  Jago
   affiliation: Nottingham University
-  img: "/img/mark.jpeg"
-  homepage: "http://www.markjago.nethttp://www.markjago.net//"
+  img: "/img/people/mark.jpeg"
+  homepage: "http://www.markjago.nethttp://www.markjago.net"
 
-- name:
-  - first: Johannes 
-    last:  Korbmacher
+- first: Johannes
+  last:  Korbmacher
   affiliation: Utrecht University
-  img: "/img/johannes.jpg"
+  img: "/img/people/johannes.jpg"
   homepage: https://jkorbmacher.org
