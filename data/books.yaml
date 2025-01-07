@@ -1,0 +1,48 @@
+main:
+
+- title: What Truth Is
+  year: 2018
+  publisher: Oxford
+  image: WhatTruthIsJacketSmall.jpg
+  url:
+  blurb: |
+    Truthmaker semantics is an approach to semantics that has attracted a
+    growing amount of interest in recent years. It takes the content of a
+    statement to be given in terms of the states that exactly verify it, where
+    this is taken to require that the state—roughly, a  part or fragment of a
+    world—be wholly relevant to the truth of the  statement. The truthmaker
+    approach allows one to draw a number of important hyperintensional
+    distinctions that do not appear to be available to other approaches, like
+    the more familiar possible world semantics. In this course, after an
+    introduction to the history, the motivations, and the basic framework of
+    truthmaker semantics, we will survey its applications to (i) deontic and
+    imperative logic, (ii) conditionals, (iii) partial content, (iv)
+    intuitionistic and relevance logic, (v) Bayesian epistemology and the
+    theory of rational belief revision, as well as (vi) natural language
+    semantics (attitude reports, modals, and intensional definite
+    descriptions).
+
+- title: The Impossible
+  year: 2014
+  publisher: Oxford
+  image: TheImpossibleJacketSmall.jpg
+  url:
+  blurb: |
+    I present an original philosophical account of meaningful thought: in particular, how it is meaningful to think about things that are impossible. We think about impossible things all the time. We can think about alchemists trying to turn base metal to gold, and about unfortunate mathematicians trying to square the circle. We may ponder whether god exists; and philosophers frequently debate whether properties, numbers, sets, moral and aesthetic qualities, and qualia exist. In many philosophical or mathematical debates, when one side of the argument gets things wrong, it necessarily gets them wrong. As we consider both sides of one of these philosophical arguments, we will at some point think about something that’s impossible. Yet most philosophical accounts of meaning and content hold that we can’t meaningfully think or reason about the impossible.
+
+    In The Impossible, I argue that we often gain new information, new beliefs and, sometimes, fresh knowledge through logic, mathematics and philosophy. That is why logic, mathematics, and philosophy are useful. We therefore require accounts of knowledge and belief, of information and content, and of meaning which allow space for the impossible. My aim in this book is to provide such accounts. I give a detailed analysis of the concept of hyperintensionality, whereby logically equivalent contents may be distinct, and develops a theory in terms of possible and impossible worlds. Along the way, I provide a theory of what those worlds are and how they feature in our analysis of normative epistemic concepts: knowledge, belief, information, and content.
+
+- title: Reality Making
+  year: 2016
+  publisher: Oxford
+  image: RealityMakingJacketSmall.jpg
+  url:
+  blurb: |
+      What makes up reality, and how? What kinds of entity are fundamental to reality, and how do dependent entities depend on the fundamental ones? How does one entity metaphysically ground another? These questions are central to contemporary metaphysics. The papers in this collection, written by a new generation of metaphysicians, address these and related questions. They investigate the metaphysical concepts of grounding and fundamentality, and the relationship between the fundamental and all the other parts of reality. Together, these papers represent the cutting-edge of a central topic in contemporary metaphysics.
+
+- title: Impossible Worlds
+  year: 2019
+  publisher: Oxford
+  image: ImpossibleWorldsJacketSmall
+  url:
+  blurb:
