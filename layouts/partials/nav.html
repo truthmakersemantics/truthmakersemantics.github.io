@@ -14,9 +14,18 @@
   <div id="myNav" class="overlay">
     <!-- Overlay content -->
     <div class="overlay-content">
-      {{range .Site.Menus.main }}
+      {{range .Site.Menus.custom }}
         <div class="menu-item">
-        <a class="nav-link link-secondary" href="{{.URL}}">{{ .Title }}</a>
+          {{ if .HasChildren }}
+          <a class="nav-link link-secondary">{{ .Name }}</a>
+            {{ range .Children }}
+              <div class="menu-item">
+                <a class="nav-link link-secondary" href="{{.URL}}">{{ .Name }}</a>
+              </div>
+            {{ end }}
+          {{ else }}
+          <a class="nav-link link-secondary" href="{{.URL}}">{{ .Name }}</a>
+          {{ end }}
         </div>
       {{ end }}
     </div>

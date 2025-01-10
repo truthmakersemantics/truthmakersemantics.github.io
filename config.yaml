@@ -2,6 +2,29 @@
 baseURL: https://truthmakersemantics.github.io/
 title: Truthmaker Semantics
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
+ goldmark:
+   renderer:
+     unsafe: true
+
+menus:
+  custom:
+  - name: About
+    pageRef: /
+    weight: 10
+  - name: Conferences
+    pageRef: /aitms
+    weight: 20
+  - name: 2025
+    pageRef: /aitms/2025
+    weight: 22
+    parent: Conferences
+  - name: 2023
+    pageRef: /aitms/2023
+    weight: 24
+    parent: Conferences
+  - name: People
+    pageRef: /people
+    weight: 30
+  - name: Publications
+    pageRef: /publications
+    weight: 40

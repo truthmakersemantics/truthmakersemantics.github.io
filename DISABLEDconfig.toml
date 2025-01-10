@@ -1,0 +1,20 @@
+baseURL = "https://truthmakersemantics.github.io/"
+title = "Truthmaker Semantics"
+
+[menu]
+[[menu.custom]]
+  name = 'About'
+  url = '/'
+  weight = 10
+[[menu.custom]]
+  name = 'People'
+  url = '/people'
+  weight = 20
+[[menu.custom]]
+  name = 'Conferences'
+  url = '/aitms'
+  weight = 25
+[[menu.custom]]
+  name = 'Publications'
+  url = '/publications'
+  weight = 30
