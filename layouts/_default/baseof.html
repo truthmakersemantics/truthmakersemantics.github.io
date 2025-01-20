@@ -13,7 +13,10 @@
       type="image/png"
       href="data:image/png;base64,">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="/css/custom.css" rel="stylesheet">
+    <!--<link href="/css/custom.css" rel="stylesheet">-->
+    <!-- This cache busts the css file-->
+    {{ $styles := resources.Get "css/custom.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
     <!-- icon library -->
     <script src="https://kit.fontawesome.com/1d773f205f.js" crossorigin="anonymous"></script>
     <script src="/js/nav.js"></script>
